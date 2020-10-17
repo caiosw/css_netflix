@@ -8,6 +8,22 @@
     margin-top: 5px;
     width: 300px;
   }
+
+  .modal__content {
+    display: block!important;
+    flex-direction: row;
+  }
+
+  .modal__content .container {
+    margin: 0;
+  }
+
+  .modal__content img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+
 }
 
 @media screen and (min-width: 1000px) {

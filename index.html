@@ -10,55 +10,95 @@
   <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
   <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
 
+  <link rel="stylesheet" href="style/micromodal.css">
 
-  <title>NETFLIX Clone</title>
+
+  <title>MOVIEFLIX</title>
 </head>
 <body>
+
+  <div class="modal micromodal-slide" id="modal-info" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal_title">
+            ENOLA HOLMS
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-custom-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <img id="modal_image" src="img/thumb0.jpg">
+          <div class="container">
+            <p class="modal-description" id="modal_description">
+              While searching for her missing mother, intrepid teen Enola Holmes 
+              uses her sleuthing skills to outsmart big brother Sherlock and help 
+              a runaway lord.
+            </p>
+            <button id="modal_watch_btn" class="button"><i class="fas fa-play"></i>WATCH NOW</button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
   <header>
     <div class="container">
-      <h2 class="logo">NETFLIX</h2>
+      <h2 class="logo">MOVIEFLIX</h2>
       <nav>
-        <a href="#">Home</a>
+        <a href="/">Home</a>
         <a href="#">Series</a>
         <a href="#">Movies</a>
         <a href="#">Documentaries</a>
       </nav>
     </div>
   </header>
-
-  <main>
-    <div class="main-movie">
-      <div class="container">
-        <h3 class="title">ENOLA HOLMES</h3>
-        <p class="description">
-          While searching for her missing mother, intrepid teen Enola Holmes 
-          uses her sleuthing skills to outsmart big brother Sherlock and help 
-          a runaway lord.
-        </p>
-
-        <div class="buttons">
-          <button role="button" class="button">
-            <i class="fas fa-play"></i>
-            WATCH NOW
-          </button>
-          <button role="button" class="button">
-            <i class="fas fa-info-circle"></i>
-            MORE INFO
-          </button>  
+  <section id="home">
+    <main>
+      <div class="main-movie">
+        <div class="container">
+          <h3 class="title">ENOLA HOLMES</h3>
+          <p class="description">
+            While searching for her missing mother, intrepid teen Enola Holmes 
+            uses her sleuthing skills to outsmart big brother Sherlock and help 
+            a runaway lord.
+          </p>
+  
+          <div class="buttons">
+            <button role="button" class="button" data-movie-watch="id_0">
+              <i class="fas fa-play"></i>
+              WATCH NOW
+            </button>
+            <button role="button" class="button" data-custom-open="modal-info"
+                    data-movie-info="id_0">
+              <i class="fas fa-info-circle"></i>
+              MORE INFO
+            </button>  
+          </div>
         </div>
       </div>
+    </main>
+  
+    <div class="movies-carousel">
+      <div class="owl-carousel owl-theme" id="home_carousel"></div>
     </div>
-  </main>
-
-  <div class="movies-carousel">
-    <div class="owl-carousel owl-theme" id="home_carousel">
-
+  </section>
+  <section id="theater" class="d-none">
+    <div class="title">
+      You are now watching <span id="movie_title"></span>
     </div>
-  </div>
+    <div class="container" id="video_player_container">
+      <iframe id="video_player" width="100%" height="100vh" frameborder="0"allowfullscreen></iframe>
+    </div>
+
+
+  </section>
+
 
   <script src="https://kit.fontawesome.com/534783c6d1.js" crossorigin="anonymous"></script>
   <script src="js/owl/jquery.min.js"></script>
   <script src="js/owl/owl.carousel.min.js"></script>
+  <script src="js/micromodal.min.js"></script>
+  <script src="js/movies_data.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -1,6 +1,6 @@
 :root {
   --red: #E50914;
-  --black: #141414;
+  --black: #000;
 }
 
 *{
@@ -104,4 +104,55 @@ header nav a:hover {
 
 .movies-carousel {
   margin-top: 5px;
+}
+
+.movies-carousel img {
+  cursor: pointer;
+}
+
+.modal__content img {
+  max-width: 15rem;
+  width: auto;
+  height: auto;
+}
+
+.modal__content .container {
+  font-size: 3vh;
+}
+
+.modal__content .container .button {
+  background-color: var(--red);
+  font-size: 2vh;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.modal__content .container .button:hover {
+  background-color: white;
+  color: black;
+}
+
+.d-none {
+  display: none!important;
+}
+
+/* video player */
+#video_player_container {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%;
+}
+
+#video_player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section#theater .title {
+  padding: 15px 25px;
 }
